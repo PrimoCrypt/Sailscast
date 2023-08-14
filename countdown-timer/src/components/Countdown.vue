@@ -31,7 +31,9 @@ const startCountdown =()=>{
         timer.value = setInterval(()=>{
             timeLeft.value--
             if(timeLeft.value === 0){
-                clearInterval(timer)
+                clearInterval(timer.value)
+                inputDisplay.value = true
+                isTimeWorking.value = false
             }
         }, 1000) 
         inputDisplay.value = false
@@ -63,8 +65,6 @@ const resetCountdown = ()=>{
     isTimerPaused.value = false
 }
 
-
-    
 </script>
 
 <template>
